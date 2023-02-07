@@ -23,6 +23,14 @@ To build the Windows version of the image, run the following command:
 docker build -t <image_name> -f Dockerfile.windows .
 ```
 Replace _<image_name>_ with a descriptive name for the image.
+If you encounter the following error:
+```bash
+Error response from daemon: open \\.\pipe\docker_engine_windows: The system cannot find the file specified.
+```
+Open pwsh with Administrator permissions and execute the code below and restart your machine:
+```bash
+Enable-WindowsOptionalFeature -Online -FeatureName $(“Microsoft-Hyper-V”, “Containers”) -All
+```
 ## Running the image
 
 The image can be run as a container using the **'docker run'** command. The following command will start a new container based on the image:
