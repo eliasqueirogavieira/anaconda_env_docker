@@ -1,0 +1,20 @@
+name: envml
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - matplotlib
+  - jupyter
+  - tensorflow
+  - keras
+  - tensorboard
+  - opencv
+  - scikit-learn
+  - scikit-image
+  - nltk
+  - seaborn
+  - scipy
+channels:
+  - conda-forge
+  - defaults
+  - anaconda
