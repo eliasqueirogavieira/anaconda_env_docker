@@ -1,0 +1,10 @@
+#alternative to create a dockerfile based on Linux that can be ran on Windows
+FROM continuumio/anaconda3
+
+COPY environment.yml .
+
+RUN conda env create -f environment.yml
+
+SHELL ["cmd", "/S", "/C"]
+
+RUN conda activate envml
